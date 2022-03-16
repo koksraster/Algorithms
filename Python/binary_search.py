@@ -19,13 +19,14 @@ def binary_search(lst,x):
 			start = mid + 1
 	return None
 
-try:
-	count_one = int(input("Введите диапозон поиска:\n"))
-	x = int(input("Введите искомое число:\n"))
-except ValueError as error:
-	print("Ошибка -", error)
-	count_one = 100
-	x = 0
+while True:
+	try:
+		count_one = int(input("Введите диапозон поиска:\n"))
+		x = int(input("Введите искомое число:\n"))
+	except ValueError as error:
+		print("Ошибка -", error)
+	else:
+		break
 
 lst = [i for i in range(1, (count_one + 1))]
 
